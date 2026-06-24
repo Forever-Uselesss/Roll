@@ -9,7 +9,7 @@ This template was initially generated using [esp-generate](https://github.com/es
 <!-- generator parameters: --chip esp32c6 -o esp32c6-mini-1 -o unstable-hal -o embassy -o stack-smashing-protection -o probe-rs -o defmt -o panic-rtt-target -o ci -o vscode -o zed -o stable-x86_64-unknown-linux-gnu-->
 
 <center>
-    <img alt="ESP32-C6-DevKitM-1" src="./support/esp32-c6-devkitm-annotated.png" width="500" height="300">
+    <img alt="ESP32-C6-DevKitM-1" src="../../support/esp32-c6-devkitm-annotated.png" width="500" height="300">
 </center>
 
 The ESP32-C6 SoC (System on Chip) supports Wi-Fi 6 in 2.4 GHz band, Bluetooth 5, Zigbee 3.0 and Thread 1.3.
