@@ -1,0 +1,13 @@
+{
+  "check": {
+    "command": "check",
+    "targets": ["riscv32imac-unknown-none-elf"],
+    "extraArgs": ["--no-default-features"]
+  },
+  "cargo": {
+    "target": "riscv32imac-unknown-none-elf"
+  },
+  "checkOnSave": {
+    "enable": true
+  }
+}

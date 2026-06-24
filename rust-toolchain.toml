@@ -1,4 +1,5 @@
 [toolchain]
 channel    = "nightly"
-components = ["rust-src"]
+components = ["rust-src", "rust-analyzer"]
 targets = ["riscv32imac-unknown-none-elf"]
+test = false
