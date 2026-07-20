@@ -1,6 +1,11 @@
 fn main() {
     linker_be_nice();
     println!("cargo:rustc-link-arg=-Tdefmt.x");
+
+    if std::env::var("CARGO_CFG_TEST").is_ok() {
+        println!("cargo:rustc-link-arg=-Tembedded-test.x");
+    }
+
     // make sure linkall.x is the last linker script (otherwise might cause problems with flip-link)
     println!("cargo:rustc-link-arg=-Tlinkall.x");
 }

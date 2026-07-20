@@ -25,6 +25,3 @@ target/
 # Ignore .DS_Store file in mac
 **/.DS_Store
 
-support/esp32-c6_datasheet_en.pdf
-support/esp32-c6-devkitm-1-schematics.pdf
-support/esp32-c6-mini-1_mini-1u_datasheet_en.pdf
