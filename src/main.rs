@@ -10,12 +10,12 @@
 use defmt::info;
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
+use esp_hal::Async;
 use esp_hal::clock::CpuClock;
 use esp_hal::gpio::Level;
 use esp_hal::rmt::{Channel, PulseCode, Rmt, Tx, TxChannelConfig, TxChannelCreator};
 use esp_hal::time::Rate;
 use esp_hal::timer::timg::TimerGroup;
-use esp_hal::Async;
 use panic_rtt_target as _;
 
 #[allow(
