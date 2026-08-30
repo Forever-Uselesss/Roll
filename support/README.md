@@ -26,6 +26,20 @@ Embedded development can involve several interacting toolchains, targets, debugg
     
 ## Documentation
 
+This folder contains all documentation required for the project. 
+
 ## Hardware
 
 ## Progress
+
+[x] Define Problem Statement
+[ ] Define requirements
+[ ] Define architecture
+[x] Select MCU
+[x] Establish Rust toolchain
+[x] Establish probe-rs debugging
+[x] Establish defmt logging
+[ ] Design input subsystem
+[ ] Implement input subsystem
+[ ] Prototype PCB
+[ ] Bring up PCB
