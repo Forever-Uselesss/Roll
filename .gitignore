@@ -31,3 +31,5 @@ target/
 .kate*
 kate*
 kate/*
+lsp.json
+

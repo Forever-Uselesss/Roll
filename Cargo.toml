@@ -1,11 +1,11 @@
 [package]
 edition      = "2024"
-name         = "esp32c6-roll"
+name         = "roll"
 rust-version = "1.88"
 version      = "0.1.1"
 
 [[bin]]
-name = "esp32c6-roll"
+name = "roll"
 path = "./src/main.rs"
 
 [dev-dependencies]
@@ -16,28 +16,37 @@ name = "init_test"
 harness = false
 
 [features]
-defmt = ["dep:defmt"]
+defmt = [
+    "dep:defmt",
+    "esp-hal/defmt",
+    "esp-rtos/defmt",
+    "esp-bootloader-esp-idf/defmt",
+    "embassy-executor/defmt",
+    "embassy-time/defmt",
+    "panic-rtt-target/defmt",
+    "rtt-target/defmt",
+]
+# future support for other targets
+esp32c6 = []
 
 [dependencies]
-esp-hal  = { version = "~1.1.0", features = ["defmt", "esp32c6", "unstable"] }
-esp-rtos = { version = "0.3.0", features = ["defmt", "embassy", "esp32c6"] }
+# Base dependencies without hardcoded defmt features
+esp-hal  = { version = "~1.1.0", features = ["esp32c6", "unstable"] }
+esp-rtos = { version = "0.3.0", features = ["embassy", "esp32c6"] }
+esp-bootloader-esp-idf = { version = "0.5.0", features = ["esp32c6"] }
 
+embassy-executor = { version = "0.10.0" }
+embassy-time     = { version = "0.5.0" }
+panic-rtt-target = { version = "0.2.0" }
+rtt-target       = { version = "0.6.2" }
+
+# Optional defmt crate
 defmt = { version = "1.1.1", optional = true }
-esp-bootloader-esp-idf = { version = "0.5.0", features = ["defmt", "esp32c6"] }
-
-embassy-executor = { version = "0.10.0", features = ["defmt"] }
-embassy-time     = { version = "0.5.0", features = ["defmt"] }
-panic-rtt-target = { version = "0.2.0", features = ["defmt"] }
-rtt-target       = { version = "0.6.2", features = ["defmt"] }
 
 critical-section = "1.2.0"
 static_cell      = "2.1.1"
 
-
-# For fine tuning these settings, please refer to https://doc.rust-lang.org/cargo/reference/profiles.html
 [profile.dev]
-# The default debug profile is too slow and too big for resource-constrained devices.
-# Always build with some optimizations enabled.
 opt-level     = 's'
 debug         = true
 strip         = "none"
@@ -46,8 +55,8 @@ panic         = 'abort'
 codegen-units = 16
 
 [profile.release]
-codegen-units = 1     # LLVM can perform better optimizations using a single thread
+codegen-units = 1
 debug         = 0
 lto           = 'fat'
 opt-level     = 3
-strip         = false
+strip         = true
