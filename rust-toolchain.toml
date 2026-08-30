@@ -1,5 +1,5 @@
 [toolchain]
 channel    = "stable"
-components = ["rust-src", "rust-analyzer"]
 targets = ["riscv32imac-unknown-none-elf"]
+components = ["rust-src", "rust-analyzer", "clippy"]
 test = false

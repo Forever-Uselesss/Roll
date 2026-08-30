@@ -56,7 +56,7 @@ jobs:
         run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile release
 
       - name: Clippy
-        run: cargo clippy --target riscv32imac-unknown-none-elf --verbose -- -D warnings
+        run: cargo clippy --target riscv32imac-unknown-none-elf --verbose --all-features --workspace -- -D warnings
 
       - name: Audit
         run: cargo audit
