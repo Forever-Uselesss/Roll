@@ -32,14 +32,36 @@ This folder contains all documentation required for the project.
 
 ## Progress
 
-[x] Define Problem Statement
-[ ] Define requirements
-[ ] Define architecture
-[x] Select MCU
-[x] Establish Rust toolchain
-[x] Establish probe-rs debugging
-[x] Establish defmt logging
-[ ] Design input subsystem
-[ ] Implement input subsystem
-[ ] Prototype PCB
-[ ] Bring up PCB
+### Development Status
+>Currently using an ESP32-C6 development board. The goal is to develop a fully standalone embedded platform after prototyping.
+
+- **Designed** → Architecture and requirements are defined.
+- **Implemented** → The required code or hardware exists.
+- **Validated** → The implementation has been tested and confirmed working on actual hardware.
+
+
+- [ ] Define requirements
+- [ ] Define architecture
+- [x] Select MCU
+- [x] Establish Rust toolchain
+- [x] Establish probe-rs debugging
+- [x] Establish defmt logging
+- [ ] Validate a functional prototype
+
+### Peripherals
+- [ ] Input device
+- [ ] ADXL345
+- [ ] audio
+- [ ] display
+- [ ] feedback
+- [ ] Other devices
+
+### Hardware
+- [ ] Design prototype PCB
+- [ ] Manufacture prototype PCB
+- [ ] Bring up prototype PCB
+- [ ] Validate hardware
+
+### Integration
+- [ ] Integrate input hardware with firmware
+- [ ] Validate complete dice-rolling workflow
