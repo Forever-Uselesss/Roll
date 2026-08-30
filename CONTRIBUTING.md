@@ -3,9 +3,11 @@
 ## Before You Start
 
 Please read:
-- README.md
-- support/documentation/DESIGN.md
-- support/documentation/quick_start.md
+
+- [README](https://github.com/Forever-Uselesss/Roll/tree/main/README.md)
+- [CODE OF CONDUCT](https://github.com/Forever-Uselesss/Roll/blob/main/CODE_OF_CONDUCT.md)
+- [Support Documents Available](https://github.com/Forever-Uselesss/Roll/tree/main/support)
+  - [Quick Start Guide](https://github.com/Forever-Uselesss/Roll/blob/main/support/documentation/quick_start.md)
 
 ## Development Setup
 

@@ -37,6 +37,9 @@ async fn main(_spawner: Spawner) -> ! {
 
     // fist log is important
     log_info!("hello world");
+    log_warn!("hello world");
+    log_error!("hello world");
+
 
     // init code for ESP32-C6
     let config = Config::default().with_cpu_clock(CpuClock::max());
@@ -51,9 +54,14 @@ async fn main(_spawner: Spawner) -> ! {
     loop {
         // Your application loop
         log_info!("tick...");
-        log_warn!("tick...");
-        log_error!("tick...");
-        // Timer::after(Duration::from_secs(1)).await;
         Timer::after(Duration::from_secs(1)).await;
+
+        log_warn!("tick...");
+        Timer::after(Duration::from_secs(2)).await;
+
+        log_error!("tick...");
+        Timer::after(Duration::from_secs(3)).await;
+
+        // Timer::after(Duration::from_secs(1)).await;
     }
 }

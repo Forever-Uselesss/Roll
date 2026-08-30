@@ -1,6 +1,6 @@
 # Support
 
-> If you are looking to get started please refer to [Quick Start](https://github.com/Forever-Uselesss/Roll/blob/main/support/documentation/quick_start.md) document. 
+> If you are looking to get started please refer to [Quick Start Guide](https://github.com/Forever-Uselesss/Roll/blob/main/support/documentation/quick_start.md). 
 
 ## Table of Contents
 - [Get Support](#get-support)
