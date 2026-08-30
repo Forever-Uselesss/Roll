@@ -14,10 +14,11 @@ Physical tabletop games (like D&D, Pathfinder, and classic board games) rely hea
 
 ## Getting Started
 ### Prerequisites
-- KiCad for PCB design
-- Rust toolchain with `riscv32imac-unknown-none-elf` target
-- An ESP-32-C3 as this projcect is being developed on one
-- ADXL-345 the primary sensor
+- Rust Toolchain
+- ESP32-C6
+  - if using another dev board, change the config files
+- Patience
+- Read the [Support](https://github.com/Forever-Uselesss/Roll/tree/main/support) documents avaliable
 
 ## Repository Structure
 
