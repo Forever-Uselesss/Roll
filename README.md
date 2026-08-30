@@ -22,3 +22,8 @@ Physical tabletop games (like D&D, Pathfinder, and classic board games) rely hea
 
 ## Repository Structure
 
+|src/ |       Application source|
+|tests/ |     Tests|
+support/    Hardware and project documentation
+.cargo/     Cargo target configuration
+.github/    CI workflows
