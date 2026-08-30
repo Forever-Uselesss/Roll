@@ -1,4 +1,5 @@
 # DICE
+>Designed in collaboration with [RISC-V Ottawa (RVO)](https://riscvottawa.ca/)
 
 An open-source, accessible electronic dice roller built on RISC-V architecture. Designed in collaboration with [RISC-V Ottawa (RVO)](https://riscvottawa.ca/), this project removes physical barriers to tabletop gaming so everyone can roll D20s regardless of physical ability.
 
