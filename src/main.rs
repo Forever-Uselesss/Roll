@@ -12,16 +12,14 @@ pub mod log;
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
 use esp_hal::{
-    Async, Config,
+    Config,
     clock::CpuClock,
-    delay::Delay,
-    gpio::{Level, Output, OutputConfig},
-    peripherals::Peripherals,
-    rmt::{Channel, PulseCode, Rmt, Tx, TxChannelConfig, TxChannelCreator},
-    time::Rate,
     timer::timg::TimerGroup,
+    interrupt::software::SoftwareInterruptControl
 };
 use log::log_info;
+use log::log_warn;
+use log::log_error;
 use panic_rtt_target as _;
 
 // Inject the required ESP-IDF application descriptor macro here:
@@ -44,7 +42,6 @@ async fn main(_spawner: Spawner) -> ! {
     let config = Config::default().with_cpu_clock(CpuClock::max());
     let peripherals = esp_hal::init(config);
     let timg0 = TimerGroup::new(peripherals.TIMG0);
-    use esp_hal::interrupt::software::SoftwareInterruptControl;
     let software_interrupt = SoftwareInterruptControl::new(peripherals.SW_INTERRUPT);
     esp_rtos::start(timg0.timer0, software_interrupt.software_interrupt0);
 
@@ -54,6 +51,8 @@ async fn main(_spawner: Spawner) -> ! {
     loop {
         // Your application loop
         log_info!("tick...");
+        log_warn!("tick...");
+        log_error!("tick...");
         // Timer::after(Duration::from_secs(1)).await;
         Timer::after(Duration::from_secs(1)).await;
     }
