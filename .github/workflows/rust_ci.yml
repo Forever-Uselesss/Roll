@@ -36,6 +36,7 @@ jobs:
 
 
       - name: Cache Rust
+        id: cargo-cache
         uses: actions/cache@v6
         with:
             path: |
@@ -49,6 +50,7 @@ jobs:
                 ${{ runner.os }}-rust-stable-riscv32imac-
 
       - name: Install cargo-audit
+        if: steps.cargo-cache.outputs.cache-hit != 'true'
         run: cargo install cargo-audit
 
       - name: Build debug + defmt
