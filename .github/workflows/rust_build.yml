@@ -32,17 +32,31 @@ jobs:
           targets: riscv32imac-unknown-none-elf
           components: clippy
 
+
+      - name: Cache Rust
+        uses: actions/cache@v4
+        with:
+            path: |
+                ~/.cargo/registry
+                ~/.cargo/git
+                ~/.cargo/bin
+                target
+            key: ${{ runner.os }}-rust-stable-riscv32imac-${{ hashFiles('**/Cargo.lock') }}
+
+            restore-keys: |
+                ${{ runner.os }}-rust-stable-riscv32imac-
+
       - name: Install cargo-audit
         run: cargo install cargo-audit
 
       - name: Build debug + defmt
-        run: cargo build --verbose --profile dev --features defmt
+        run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile dev --features defmt
 
       - name: Build Release
-        run: cargo build --verbose --profile release
+        run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile release
 
       - name: Clippy
-        run: cargo clippy --verbose -- -D warnings
+        run: cargo clippy --target riscv32imac-unknown-none-elf --verbose -- -D warnings
 
       - name: Audit
         run: cargo audit
