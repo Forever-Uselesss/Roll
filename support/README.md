@@ -17,3 +17,8 @@ Let me start by offering gratitude. Embedded projects are notorious and evil. Ad
     - [ESP-rs documentation and resources](https://docs.espressif.com/projects/rust/)
     - [ESP32-C6 HAL-rs (v1.1.1)](https://docs.espressif.com/projects/rust/esp-hal/1.1.1/esp32c6/esp_hal/index.html)
     - [ESP-IDF ESP32-C6](https://docs.espressif.com/projects/esp-idf/en/stable/esp32c6/)
+
+    
+## Documentation
+
+## Hardware
