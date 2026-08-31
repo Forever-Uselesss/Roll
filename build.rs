@@ -1,7 +1,7 @@
 fn main() {
     linker_be_nice();
 
-    #[cfg(feature = "defmt")]
+    #[cfg(feature = "log_defmt")]
     println!("cargo:rustc-link-arg=-Tdefmt.x");
 
     if std::env::var("CARGO_CFG_TEST").is_ok() {

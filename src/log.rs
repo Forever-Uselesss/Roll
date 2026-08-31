@@ -1,6 +1,10 @@
-// src/log.rs
+// Logging utility.
+//
+// Features:
+// - `log_defmt`: log via defmt
+// - `log_uart`: log via UART (not yet implemented)
 
-#[cfg(feature = "defmt")]
+#[cfg(feature = "log_defmt")]
 defmt::timestamp!(
     "{=u64:us}",
     esp_hal::time::Instant::now()
@@ -8,42 +12,34 @@ defmt::timestamp!(
         .as_micros()
 );
 
-#[cfg(feature = "defmt")]
+#[macro_export]
 macro_rules! log_info {
     ($($arg:tt)*) => {
+        #[cfg(feature = "log_defmt")]
         defmt::info!($($arg)*);
     };
 }
 
-#[cfg(not(feature = "defmt"))]
-macro_rules! log_info {
-    ($($arg:tt)*) => {};
-}
+pub use log_info;
 
-#[cfg(feature = "defmt")]
+#[macro_export]
 macro_rules! log_warn {
     ($($arg:tt)*) => {
+        #[cfg(feature = "log_defmt")]
         defmt::warn!($($arg)*);
     };
 }
 
-#[cfg(not(feature = "defmt"))]
-macro_rules! log_warn {
-    ($($arg:tt)*) => {};
-}
+pub use log_warn;
 
-#[cfg(feature = "defmt")]
+#[macro_export]
 macro_rules! log_error {
     ($($arg:tt)*) => {
+        #[cfg(feature = "log_defmt")]
         defmt::error!($($arg)*);
     };
 }
 
-#[cfg(not(feature = "defmt"))]
-macro_rules! log_error {
-    ($($arg:tt)*) => {};
-}
+pub use log_error;
 
-pub(crate) use log_error;
-pub(crate) use log_info;
-pub(crate) use log_warn;
+// TODO: implement UART logging (`log_uart`)

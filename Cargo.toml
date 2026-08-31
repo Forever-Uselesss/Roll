@@ -4,9 +4,13 @@ name         = "roll"
 rust-version = "1.88"
 version      = "0.1.1"
 
+[lib]
+test = false
+
 [[bin]]
 name = "roll"
 path = "./src/main.rs"
+test = false
 
 [dev-dependencies]
 embedded-test = "0.7.0"
@@ -16,7 +20,8 @@ name = "init_test"
 harness = false
 
 [features]
-defmt = [
+# log features
+log_defmt = [
     "dep:defmt",
     "esp-hal/defmt",
     "esp-rtos/defmt",
@@ -26,6 +31,8 @@ defmt = [
     "panic-rtt-target/defmt",
     "rtt-target/defmt",
 ]
+log_uart = []
+
 # future support for other targets
 esp32c6 = []
 

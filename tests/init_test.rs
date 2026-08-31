@@ -27,7 +27,10 @@
 )]
 #![deny(clippy::large_stack_frames)]
 
-use defmt::info;
+
+use roll::log::log_info;
+
+
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
 use esp_hal::Async;
@@ -62,6 +65,8 @@ esp_bootloader_esp_idf::esp_app_desc!();
 )]
 #[esp_rtos::main]
 async fn main(spawner: Spawner) -> ! {
+
+    #[cfg(feature = "log_defmt")]
     rtt_target::rtt_init_defmt!();
 
     let config = esp_hal::Config::default().with_cpu_clock(CpuClock::max());
@@ -72,7 +77,7 @@ async fn main(spawner: Spawner) -> ! {
         esp_hal::interrupt::software::SoftwareInterruptControl::new(peripherals.SW_INTERRUPT);
     esp_rtos::start(timg0.timer0, sw_interrupt.software_interrupt0);
 
-    info!("Embassy initialized!");
+    log_info!("Embassy initialized!");
 
     // Drive the on-board addressable RGB LED (WS2812) on GPIO8 via the RMT peripheral.
     let rmt = Rmt::new(peripherals.RMT, Rate::from_mhz(80))
@@ -87,7 +92,7 @@ async fn main(spawner: Spawner) -> ! {
     spawner.spawn(blink_rgb(led).expect("failed to create LED task"));
 
     loop {
-        info!("Hello, RISC-V Ottawa!");
+        log_info!("Hello, RISC-V Ottawa!");
         Timer::after(Duration::from_secs(1)).await;
     }
 }
@@ -123,7 +128,7 @@ async fn blink_rgb(mut led: Channel<'static, Async, Tx>) -> ! {
     loop {
         for (red, green, blue) in COLORS {
             if let Err(err) = led.transmit(&encode_color(red, green, blue)).await {
-                info!("RMT transmit failed: {}", err);
+                log_info!("RMT transmit failed: {}", err);
             }
             // Hold the color; the line idles low, latching the LED.
             Timer::after(Duration::from_millis(500)).await;

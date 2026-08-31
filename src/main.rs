@@ -7,7 +7,7 @@
 )]
 #![deny(clippy::large_stack_frames)]
 
-pub mod log;
+
 
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
@@ -17,9 +17,11 @@ use esp_hal::{
     timer::timg::TimerGroup,
     interrupt::software::SoftwareInterruptControl
 };
-use log::log_info;
-use log::log_warn;
-use log::log_error;
+use roll::log::{
+    log_info,
+    log_warn,
+    log_error
+};
 use panic_rtt_target as _;
 
 // Inject the required ESP-IDF application descriptor macro here:
@@ -32,7 +34,7 @@ esp_bootloader_esp_idf::esp_app_desc!();
 #[esp_rtos::main]
 async fn main(_spawner: Spawner) -> ! {
     // optional logging with defmt.
-    #[cfg(feature = "defmt")]
+    #[cfg(feature = "log_defmt")]
     rtt_target::rtt_init_defmt!();
 
     // fist log is important
