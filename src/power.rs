@@ -127,7 +127,8 @@ LightSleep,
 DeepSleep,
 }
 
-
+prompt for extensions??
+so deep slepp can be snozed in intervals of fibonacci series! wow cool
 
 
 */
