@@ -53,8 +53,8 @@ jobs:
         if: steps.cargo-cache.outputs.cache-hit != 'true'
         run: cargo install cargo-audit
 
-      - name: Build debug + defmt
-        run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile dev --features defmt
+      - name: Build debug + features
+        run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile dev --all-features
 
       - name: Build Release
         run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile release
