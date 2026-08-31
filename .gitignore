@@ -32,4 +32,5 @@ target/
 kate*
 kate/*
 lsp.json
+**kate-swp
 
