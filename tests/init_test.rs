@@ -27,9 +27,7 @@
 )]
 #![deny(clippy::large_stack_frames)]
 
-
 use roll::log::log_info;
-
 
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
@@ -65,7 +63,6 @@ esp_bootloader_esp_idf::esp_app_desc!();
 )]
 #[esp_rtos::main]
 async fn main(spawner: Spawner) -> ! {
-
     #[cfg(feature = "log_defmt")]
     rtt_target::rtt_init_defmt!();
 

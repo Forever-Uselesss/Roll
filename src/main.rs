@@ -7,22 +7,13 @@
 )]
 #![deny(clippy::large_stack_frames)]
 
-
-
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
 use esp_hal::{
-    Config,
-    clock::CpuClock,
-    timer::timg::TimerGroup,
-    interrupt::software::SoftwareInterruptControl
-};
-use roll::log::{
-    log_info,
-    log_warn,
-    log_error
+    Config, clock::CpuClock, interrupt::software::SoftwareInterruptControl, timer::timg::TimerGroup,
 };
 use panic_rtt_target as _;
+use roll::log::{log_error, log_info, log_warn};
 
 // Inject the required ESP-IDF application descriptor macro here:
 esp_bootloader_esp_idf::esp_app_desc!();
@@ -41,7 +32,6 @@ async fn main(_spawner: Spawner) -> ! {
     log_info!("hello world");
     log_warn!("hello world");
     log_error!("hello world");
-
 
     // init code for ESP32-C6
     let config = Config::default().with_cpu_clock(CpuClock::max());
