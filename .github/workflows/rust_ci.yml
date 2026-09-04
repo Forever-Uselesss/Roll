@@ -32,7 +32,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: riscv32imac-unknown-none-elf
-          components: clippy
+          components: clippy, rustfmt
 
 
       - name: Cache Rust
@@ -52,6 +52,9 @@ jobs:
       - name: Install cargo-audit
         if: steps.cargo-cache.outputs.cache-hit != 'true'
         run: cargo install cargo-audit
+
+      - name: Check formatting
+        run: cargo fmt --all -- --check
 
       - name: Build debug + features
         run: cargo build --target riscv32imac-unknown-none-elf --verbose --profile dev --all-features
