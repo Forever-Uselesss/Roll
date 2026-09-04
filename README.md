@@ -69,7 +69,7 @@ Accessibility is an ongoing part of the project's development. Feedback from use
 
 Contributions are welcome! Whether you're interested in firmware, hardware, accessibility, documentation, or testing, there are many ways to contribute.
 
-Before opening an issue or pull request, please review the [Support](/support) documentation and [`CONTRIBUTING`](CONTRIBUTING.md)
+Before opening an issue or pull request, please review the [Support documentation](/support) and [`CONTRIBUTING`](CONTRIBUTING.md)
 
 ## License
 
