@@ -32,7 +32,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: riscv32imac-unknown-none-elf
-          components: clippy
+          components: clippy, rustfmt
 
 
       - name: Cache Rust
