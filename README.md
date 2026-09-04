@@ -58,7 +58,7 @@ Getting ROLL running is straightforward.
 
 ## Accessibility
 
-DICE is designed around the principle that tabletop gaming should be accessible to everyone.
+ROLL is designed around the principle that tabletop gaming should be accessible to everyone.
 
 The device is intended to reduce the physical barriers associated with traditional dice while allowing users to customize its operation to their individual needs.
 
