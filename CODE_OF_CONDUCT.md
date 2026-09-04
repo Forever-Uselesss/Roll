@@ -55,7 +55,7 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be
-reported to the community leaders responsible for enforcement at <x32v9rwai@mozmail.com>.
+reported to the community leaders responsible for enforcement at x32v9rwai_mozmail.com.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the

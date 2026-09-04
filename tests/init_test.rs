@@ -27,9 +27,7 @@
 )]
 #![deny(clippy::large_stack_frames)]
 
-
-use roll::log::log_info;
-
+use roll::system::log::log_info;
 
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
@@ -65,7 +63,6 @@ esp_bootloader_esp_idf::esp_app_desc!();
 )]
 #[esp_rtos::main]
 async fn main(spawner: Spawner) -> ! {
-
     #[cfg(feature = "log_defmt")]
     rtt_target::rtt_init_defmt!();
 
@@ -127,8 +124,8 @@ async fn blink_rgb(mut led: Channel<'static, Async, Tx>) -> ! {
 
     loop {
         for (red, green, blue) in COLORS {
-            if let Err(err) = led.transmit(&encode_color(red, green, blue)).await {
-                log_info!("RMT transmit failed: {}", err);
+            if let Err(_err) = led.transmit(&encode_color(red, green, blue)).await {
+                log_info!("RMT transmit failed: {}", _err);
             }
             // Hold the color; the line idles low, latching the LED.
             Timer::after(Duration::from_millis(500)).await;
