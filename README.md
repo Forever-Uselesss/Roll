@@ -72,4 +72,4 @@ Before opening an issue or pull request, please review the [Support](https://git
 
 ## License
 
-DICE is open-source software. No warranty or gurantees provided. See [`LICENSE`](LICENSE) for details.
+ROLL is open-source software. No warranty or guarantees provided. See [`LICENSE`](LICENSE) for details.
