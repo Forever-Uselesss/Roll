@@ -6,6 +6,7 @@
 - [Get Support](#get-support)
     - [documentation](#documentation)
     - [hardware](#hardware)
+- [Need Help?](#need-help)
 - [Progress](#progress)
 
 ## Get Support
@@ -24,11 +25,21 @@ Embedded development can involve several interacting toolchains, targets, debugg
     - [ESP-IDF ESP32-C6](https://docs.espressif.com/projects/esp-idf/en/stable/esp32c6/)
 
     
-## Documentation
+### Documentation
 
 This folder contains all documentation required for the project. 
 
-## Hardware
+### Hardware
+
+This folder contains all documentation required for the project.
+
+---
+## Need Help?
+If none of the above documents solved your problem, please open an issue on the GitHub repository. Be sure to include:
+
+1.  **Reproduction Steps:** The exact sequence of actions that caused the issue.
+2.  **Expected Behavior:** What *should* have happened.
+3.  **Actual Behavior:** What *did* happen (including log outputs!).
 
 ## Progress
 

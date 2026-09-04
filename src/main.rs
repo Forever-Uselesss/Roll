@@ -13,7 +13,7 @@ use esp_hal::{
     Config, clock::CpuClock, interrupt::software::SoftwareInterruptControl, timer::timg::TimerGroup,
 };
 use panic_rtt_target as _;
-use roll::log::{log_error, log_info, log_warn};
+use roll::system::log::{log_error, log_info, log_warn};
 
 // Inject the required ESP-IDF application descriptor macro here:
 esp_bootloader_esp_idf::esp_app_desc!();

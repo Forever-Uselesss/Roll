@@ -15,14 +15,35 @@ ROLL boasts extensive customization, putting control in the user's hands and all
 
 ## Getting Started
 
+
+Getting ROLL running is straightforward.
+
+
 ### Prerequisites
 
-* Rust toolchain
-* ESP32-C6 development board
-
-  * If using a different development board, update the appropriate configuration files.
+* Hardware: An ESP32-C6 development board is recommended for starting development.
+* Software: Rust toolchain (rustup) installed.
+* Guidance: Please consult our [Support Documentation](https://github.com/Forever-Uselesss/Roll/tree/main/support) Documentation for detailed setup instructions.
 * Patience
-* Read the [Support](https://github.com/Forever-Uselesss/Roll/tree/main/support) documentation available in this repository.
+
+### Workflow Quick Summary
+
+1. Clone: Clone the repository.
+
+```` bash
+    git clone <repo-url>
+    cd Roll
+````
+2. Build: Compile the firmware.
+
+```` bash
+    cargo build --profile dev --all-features
+````
+3. Test: Run the included unit tests to ensure system integrity.
+
+```` bash
+    cargo test
+````
 
 ## Repository Structure
 
@@ -33,6 +54,7 @@ ROLL boasts extensive customization, putting control in the user's hands and all
 | `support/` | Project documentation and support  |
 | `.cargo/`  | Cargo and target configuration     |
 | `.github/` | CI workflows                       |
+
 
 ## Accessibility
 
