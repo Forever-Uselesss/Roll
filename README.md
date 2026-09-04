@@ -2,7 +2,7 @@
 >Designed in collaboration with [RISC-V Ottawa (RVO)](https://riscvottawa.ca/)
 
 
-An open-source, accessible electronic dice roller built on RISC-V architecture. Designed in collaboration with [RISC-V Ottawa (RVO)](https://riscvottawa.ca/), this project removes physical barriers to tabletop gaming so everyone can roll D20s regardless of physical ability.
+An open-source, accessible electronic dice roller built on RISC-V architecture. Designed in collaboration with [RISC-V Ottawa (RVO)](https://riscvottawa.ca/), this project removes physical barriers to tabletop gaming so everyone can roll D20s regardless of physical ability. 
 
 ## About the Project
 
@@ -10,8 +10,9 @@ Physical tabletop games such as D&D, Pathfinder, and classic board games rely he
 
 It is frustrating that accessibility tools can be expensive and often assume that every user can interact with them in the same way, leaving a subset of users overlooked. This is compounded by an accessibility market where relatively simple assistive tools can become disproportionately expensive. ROLL was born from that frustration: the desire for a simple, accessible device that should not need to be complicated or prohibitively expensive to exist. 
 
-ROLL boasts extensive customization, putting control in the user's hands and allowing the device to be adapted to individual needs regardless of physical ability.
-* **Proposal Details:** View the original project proposal on [MakerRepo](https://makerepo.com/project_proposals/576).
+ROLL boasts extensive customization, putting control in the user's hands and allowing the device to be adapted to individual needs regardless of physical ability. Existing electronic and digital dice rollers address the problem, but accessibility solutions often assume a particular interaction method. ROLL explores an open-source, customizable platform where the method of interaction can be adapted to the individual user.
+
+> **Proposal Details:** View the original project proposal on [MakerRepo](https://makerepo.com/project_proposals/576).
 
 ## Getting Started
 
@@ -21,29 +22,29 @@ Getting ROLL running is straightforward.
 
 ### Prerequisites
 
-* Hardware: An ESP32-C6 development board is recommended for starting development.
-* Software: Rust toolchain (rustup) installed.
-* Guidance: Please consult our [Support Documentation](https://github.com/Forever-Uselesss/Roll/tree/main/support) Documentation for detailed setup instructions.
-* Patience
+* **Hardware**: An ESP32-C6 development board is recommended for starting development.
+* **Software**: Rust toolchain (rustup) installed.
+* **Guidance**: Please consult our [Support Documentation](/support) Documentation for detailed setup instructions.
+* **Patience**
 
 ### Workflow Quick Summary
 
 1. Clone: Clone the repository.
 
-```` bash
-    git clone <repo-url>
+    ```` bash
+    git clone https://github.com/Forever-Uselesss/Roll
     cd Roll
-````
-2. Build: Compile the firmware.
+    ````
+2. Build: Compile the firmware with all features and on dev profile (debug)
 
-```` bash
+    ```` bash
     cargo build --profile dev --all-features
-````
+    ````
 3. Test: Run the included unit tests to ensure system integrity.
 
-```` bash
+    ```` bash
     cargo test
-````
+    ````
 
 ## Repository Structure
 
@@ -68,7 +69,7 @@ Accessibility is an ongoing part of the project's development. Feedback from use
 
 Contributions are welcome! Whether you're interested in firmware, hardware, accessibility, documentation, or testing, there are many ways to contribute.
 
-Before opening an issue or pull request, please review the [Support](https://github.com/Forever-Uselesss/Roll/tree/main/support) documentation and [`CONTRIBUTING`](CONTRIBUTING)
+Before opening an issue or pull request, please review the [Support](/support) documentation and [`CONTRIBUTING`](CONTRIBUTING.md)
 
 ## License
 

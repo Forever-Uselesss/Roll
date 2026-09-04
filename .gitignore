@@ -26,8 +26,6 @@ target/
 **/.DS_Store
 
 # Kate files
-.Cargo.toml.kate-swp
-.kateproject.build
 .kate*
 kate*
 kate/*

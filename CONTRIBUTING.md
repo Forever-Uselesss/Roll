@@ -3,7 +3,7 @@
 ## Before You Start
 
 Please familiarize yourself with the following:
->If you are new to the project, the [Quick Start Guide](https://github.com/Forever-Uselesss/Roll/blob/main/support/documentation/quick_start.md) is the best place to begin.
+>If you are new to the project, the [Quick Start Guide](/support/documentation/quick_start.md) is the best place to begin.
 
 - [README](https://github.com/Forever-Uselesss/Roll/tree/main/README.md)
 - [CODE OF CONDUCT](https://github.com/Forever-Uselesss/Roll/tree/main/CODE_OF_CONDUCT.md)
@@ -11,7 +11,7 @@ Please familiarize yourself with the following:
   - [Quick Start Guide](https://github.com/Forever-Uselesss/Roll/tree/main/support/documentation/quick_start.md)
 
 ## Development Setup
->Please refer to [Quick Start Guide](https://github.com/Forever-Uselesss/Roll/tree/main/support/documentation/quick_start.md) for initial setup and get the project running.
+>Please refer to [Quick Start Guide](/support/documentation/quick_start.md) for initial setup and get the project running.
 
 Different IDE does things differently. Please install your preferred extensions beforehand.
 

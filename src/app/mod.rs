@@ -1,3 +1,7 @@
+pub(crate) mod dice;
+
+#[cfg(feature = "game_master")]
+pub(crate) mod game_master;
 /*
 
 
