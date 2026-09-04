@@ -1,4 +1,4 @@
-//nedd to target specific board here
+//need to target specific board here
 /*
 
 

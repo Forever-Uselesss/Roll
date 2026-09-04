@@ -13,7 +13,7 @@ Please familiarize yourself with the following:
 ## Development Setup
 >Please refer to [Quick Start Guide](/support/documentation/quick_start.md) for initial setup and get the project running.
 
-Different IDE does things differently. Please install your preferred extensions beforehand.
+Different IDEs do things differently. Please install your preferred extensions beforehand.
 
 ## Development Flow
 
@@ -54,7 +54,7 @@ Keep your changes focused and atomic. Avoid combining unrelated bug fixes, featu
 
 ## Hardware Testing
 
-If your change interacts with hardware (e.g., a new button or sensor), please include details on the hardware and the procedure you used to verify it. Testing on hardware is very easy with Cargo test. All you have to do is run  `cargo test --all-features --target <your-build-target>` with an mcu connected to your computer and cargo runs avaliable regression tests.
+If your change interacts with hardware (e.g., a new button or sensor), please include details on the hardware and the procedure you used to verify it. Testing on hardware is very easy with Cargo test. All you have to do is run  `cargo test --all-features --target <your-build-target>` with an MCU connected to your computer and cargo runs available regression tests.
 
 ## Commit Messages
 

@@ -24,7 +24,7 @@ Getting ROLL running is straightforward.
 
 * **Hardware**: An ESP32-C6 development board is recommended for starting development.
 * **Software**: Rust toolchain (rustup) installed.
-* **Guidance**: Please consult our [Support Documentation](/support) Documentation for detailed setup instructions.
+* **Guidance**: Please consult our [Support Documentation](/support) for detailed setup instructions.
 * **Patience**
 
 ### Workflow Quick Summary
@@ -59,7 +59,7 @@ Getting ROLL running is straightforward.
 
 ## Accessibility
 
-DICE is designed around the principle that tabletop gaming should be accessible to everyone.
+ROLL is designed around the principle that tabletop gaming should be accessible to everyone.
 
 The device is intended to reduce the physical barriers associated with traditional dice while allowing users to customize its operation to their individual needs.
 
@@ -73,4 +73,4 @@ Before opening an issue or pull request, please review the [Support documentatio
 
 ## License
 
-DICE is open-source software. No warranty or gurantees provided. See [`LICENSE`](LICENSE) for details.
+ROLL is open-source software. No warranty or guarantees provided. See [`LICENSE`](LICENSE) for details.
